@@ -1,0 +1,109 @@
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.container {
+  margin-top: 100px;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 75vw;
+    background: white;
+    border-radius: 4px;
+    box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+
+
+    .image {
+      margin-top: 50px;
+      width: 80%;
+    }
+
+    .form-about {
+      width: 80%;
+      padding: 20px 0px;
+    }
+
+    form {
+      width: 80%;
+      margin-bottom: 50px;
+   /*   display: flex;
+      justify-content: space-around;
+      flex-direction: column;*/
+
+      input {
+        width: 300px;
+        height: 55px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        line-height: 26px;
+        letter-spacing: -0.32px;
+        font-size: large;
+        background: var(--color-white);
+        color: var(--color-black);
+        background: white;
+      }
+
+      .input:focus {
+        outline: none !important;
+        border: 1px solid var(--color-orange);
+        box-shadow: 0 0 2px var(--color-orange);
+        font-family: "Avenir Next LT W01 Condensed";
+      }
+
+      .input:active {
+        border: 1px solid orange;
+        background: var(--color-white);
+      }
+
+      .submit-btn {
+        margin-top: 15px;
+        background-color: mediumseagreen;
+        color: whitesmoke;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        width: 370px;
+        height: 45px;
+        border-radius: 100px;
+        letter-spacing: -0.48px;
+
+        a {
+          text-decoration: none;
+          color: white;
+          font-size: large;
+          font-weight: bold;
+        }
+
+        &:hover {
+          transition: .7s ease-in-out;
+          box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        }
+      }
+    }
+  }
+}
