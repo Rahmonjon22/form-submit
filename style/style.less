@@ -47,38 +47,56 @@ html, body {
     form {
       width: 80%;
       margin-bottom: 50px;
-   /*   display: flex;
-      justify-content: space-around;
-      flex-direction: column;*/
+      /*   display: flex;
+         justify-content: space-around;
+         flex-direction: column;*/
 
-      input {
-        width: 300px;
-        height: 55px;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-        line-height: 26px;
-        letter-spacing: -0.32px;
-        font-size: large;
-        background: var(--color-white);
-        color: var(--color-black);
-        background: white;
+      .form-input {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        input {
+          width: 300px;
+          height: 55px;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          line-height: 26px;
+          letter-spacing: -0.32px;
+          font-size: large;
+          background: white;
+          color: darkblue;
+        }
+
+        .input:focus {
+          outline: none !important;
+          border: 1px solid deepskyblue;
+          box-shadow: 0 0 2px skyblue;
+        }
+
+        .input:active {
+          border: 1px solid blue;
+          background: skyblue;
+        }
+
+        .input-number {
+          width: 200px;
+        }
+
+        //responsive input form
+        @media screen and (max-width: 850px) {
+
+          input, .input-number {
+            width: 100%;
+          }
+        }
       }
 
-      .input:focus {
-        outline: none !important;
-        border: 1px solid var(--color-orange);
-        box-shadow: 0 0 2px var(--color-orange);
-        font-family: "Avenir Next LT W01 Condensed";
-      }
-
-      .input:active {
-        border: 1px solid orange;
-        background: var(--color-white);
-      }
 
       .submit-btn {
         margin-top: 15px;
@@ -87,7 +105,7 @@ html, body {
         border: none;
         font-size: 20px;
         cursor: pointer;
-        width: 370px;
+        width: 300px;
         height: 45px;
         border-radius: 100px;
         letter-spacing: -0.48px;
@@ -104,6 +122,14 @@ html, body {
           box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
         }
       }
+
+      // responsive btn
+      @media screen and (max-width: 850px) {
+        .submit-btn {
+          width: 100%;
+        }
+      }
+
     }
   }
 }

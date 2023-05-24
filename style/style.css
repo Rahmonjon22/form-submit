@@ -44,10 +44,16 @@ body {
   width: 80%;
   margin-bottom: 50px;
   /*   display: flex;
-      justify-content: space-around;
-      flex-direction: column;*/
+         justify-content: space-around;
+         flex-direction: column;*/
 }
-.container .form-container form input {
+.container .form-container form .form-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container .form-container form .form-input input {
   width: 300px;
   height: 55px;
   padding: 12px 20px;
@@ -59,19 +65,26 @@ body {
   line-height: 26px;
   letter-spacing: -0.32px;
   font-size: large;
-  background: var(--color-white);
-  color: var(--color-black);
   background: white;
+  color: darkblue;
 }
-.container .form-container form .input:focus {
+.container .form-container form .form-input .input:focus {
   outline: none !important;
-  border: 1px solid var(--color-orange);
-  box-shadow: 0 0 2px var(--color-orange);
-  font-family: "Avenir Next LT W01 Condensed";
+  border: 1px solid deepskyblue;
+  box-shadow: 0 0 2px skyblue;
 }
-.container .form-container form .input:active {
-  border: 1px solid orange;
-  background: var(--color-white);
+.container .form-container form .form-input .input:active {
+  border: 1px solid blue;
+  background: skyblue;
+}
+.container .form-container form .form-input .input-number {
+  width: 200px;
+}
+@media screen and (max-width: 850px) {
+  .container .form-container form .form-input input,
+  .container .form-container form .form-input .input-number {
+    width: 100%;
+  }
 }
 .container .form-container form .submit-btn {
   margin-top: 15px;
@@ -80,7 +93,7 @@ body {
   border: none;
   font-size: 20px;
   cursor: pointer;
-  width: 370px;
+  width: 300px;
   height: 45px;
   border-radius: 100px;
   letter-spacing: -0.48px;
@@ -94,5 +107,10 @@ body {
 .container .form-container form .submit-btn:hover {
   transition: 0.7s ease-in-out;
   box-shadow: #26394d 0px 20px 30px -10px;
+}
+@media screen and (max-width: 850px) {
+  .container .form-container form .submit-btn {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
